@@ -6,7 +6,6 @@ import numpy as np
 # Load the Multinomial Naive Bayes model and CountVectorizer object from disk
 app = Flask(__name__)
 
-@app.route('/')
 def word_divide_char(inputs):
     characters = []
     for i in inputs:
