@@ -4,16 +4,16 @@ import pickle
 import numpy as np
 
 # Load the Multinomial Naive Bayes model and CountVectorizer object from disk
-filename = 'pswd_lg_modle.pkl'
-classifier = pickle.load(open(filename, 'rb'))
-#cv = pickle.load(open('pswd-vect.pkl','rb'))
 def word_divide_char(inputs):
     characters = []
     for i in inputs:
         characters.append(i)
     return characters
 
+filename = 'pswd_lg_modle.pkl'
+classifier = pickle.load(open(filename, 'rb'))
 cv = pickle.load(open('pswd-vect.pkl','rb'))
+
 app = Flask(__name__)
 
 @app.route('/')
