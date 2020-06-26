@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if prediction==1 %}
+    <h3 style="color:rgb(0, 102, 255)">This password is Okay</h3>
+{% elif prediction==0 %}
+    <h3 style="color:rgb(0, 102, 255)">This password is very weak</h3>
+{% else %}
+<h3 style="color:rgb(0, 102, 255)">This password is strong</h3>
+{% endif %}
+
+{% endblock %}

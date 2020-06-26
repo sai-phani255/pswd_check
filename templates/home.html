@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="shadow p-3 mb-5 bg-white rounded">
+  <h1 style="color:rgb(0, 102, 255)">Password Checking System</h1>
+  <h3 style="color:rgb(0, 102, 255)">Type a Word to Check its strength as Password.</h3>
+</div>
+
+  <form action="{{url_for('predict')}}" method="POST">
+    <input type="text" name="message" class="form-control" placeholder="Type a Word here...">
+    <br>
+    <input type="submit" class="btn btn-info" value="Predict">
+  </form>
+{% endblock %}
